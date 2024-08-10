@@ -21,7 +21,7 @@
     "types": "./index.ts"
   },
   "bin": "./cli.ts",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "module": "index.ts",
   "types": "./index.ts",
   "files": [
@@ -65,7 +65,7 @@
     "picomatch": "^2.3.1",
     "pretty-format": "^29.7.0",
     "react-is": "^18.3.1",
-    "sflow": "^1.16.6",
+    "sflow": "^1.16.7",
     "slash": "^3.0.0",
     "stack-utils": "^2.0.6",
     "supports-color": "^7.2.0",
