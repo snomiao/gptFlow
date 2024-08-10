@@ -1,0 +1,82 @@
+{
+  "name": "gptflow",
+  "version": "0.0.1",
+  "description": "Use chatgpt-stream in shell",
+  "keywords": [
+    "cli"
+  ],
+  "homepage": "https://github.com/snomiao/gptFlow#readme",
+  "bugs": {
+    "url": "https://github.com/snomiao/gptFlow/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snomiao/gptFlow.git"
+  },
+  "license": "MIT",
+  "author": "snomiao <snomiao@gmail.com>",
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.js",
+    "types": "./index.ts"
+  },
+  "bin": "./cli.ts",
+  "main": "index.js",
+  "module": "index.ts",
+  "types": "./index.ts",
+  "files": [
+    "*.ts",
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build:js && bun build:umd",
+    "build:js": "bun build . --outdir=dist",
+    "build:type": "tsc -d --noEmit false --emitDeclarationOnly --outDir dist",
+    "build:umd": "bunx rollup dist/index.js --file dist/index.umd.js --format umd --name \"main\"",
+    "prerelease": "bun run build && bun run test",
+    "release": "bunx standard-version && git push --follow-tags && npm publish",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "ansi-styles": "^5.2.0",
+    "braces": "^3.0.3",
+    "bun-types": "^1.1.17",
+    "chalk": "^4.1.2",
+    "chatgpt-template": "^1.1.4",
+    "ci-info": "^3.9.0",
+    "color-convert": "^2.0.1",
+    "color-name": "^1.1.4",
+    "diff-sequences": "^29.6.3",
+    "escape-string-regexp": "^2.0.0",
+    "expect": "^29.7.0",
+    "fill-range": "^7.1.1",
+    "graceful-fs": "^4.2.11",
+    "has-flag": "^4.0.0",
+    "is-number": "^7.0.0",
+    "jest-diff": "^29.7.0",
+    "jest-get-type": "^29.6.3",
+    "jest-matcher-utils": "^29.7.0",
+    "jest-message-util": "^29.7.0",
+    "jest-util": "^29.7.0",
+    "js-tokens": "^4.0.0",
+    "micromatch": "^4.0.7",
+    "picocolors": "^1.0.1",
+    "picomatch": "^2.3.1",
+    "pretty-format": "^29.7.0",
+    "react-is": "^18.3.1",
+    "sflow": "^1.16.6",
+    "slash": "^3.0.0",
+    "stack-utils": "^2.0.6",
+    "supports-color": "^7.2.0",
+    "to-regex-range": "^5.0.1",
+    "typescript": "^5.5.4",
+    "undici-types": "^5.26.5"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.6",
+    "@types/jest": "^29.5.12"
+  },
+  "peerDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
