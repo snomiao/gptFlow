@@ -38,6 +38,7 @@
     "test": "bun test"
   },
   "dependencies": {
+    "@types/yargs": "^17.0.33",
     "ansi-styles": "^5.2.0",
     "braces": "^3.0.3",
     "bun": "^1.1.22",
@@ -71,7 +72,8 @@
     "supports-color": "^7.2.0",
     "to-regex-range": "^5.0.1",
     "typescript": "^5.5.4",
-    "undici-types": "^5.26.5"
+    "undici-types": "^5.26.5",
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "@types/bun": "^1.1.6",
