@@ -1,6 +1,6 @@
 {
   "name": "gptflow",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A CLI tool to integrate ChatGPT with shell text streams for seamless text processing.",
   "keywords": [
     "cli"
@@ -20,7 +20,10 @@
     "import": "./dist/index.js",
     "types": "./index.ts"
   },
-  "bin": "./cli.ts",
+  "bin": {
+    "gptflow": "./bin/cli.js",
+    "gf": "./bin/cli.js"
+  },
   "main": "./dist/index.js",
   "module": "index.ts",
   "types": "./index.ts",
@@ -29,10 +32,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "bun build:js && bun build:umd",
-    "build:js": "bun build . --outdir=dist",
+    "build": "bun build:bin && bun build:js",
+    "build:bin": "bun build ./cli.ts --outdir=bin/cli.js",
+    "build:js": "bun build ./index.ts --outdir=dist",
     "build:type": "tsc -d --noEmit false --emitDeclarationOnly --outDir dist",
-    "build:umd": "bunx rollup dist/index.js --file dist/index.umd.js --format umd --name \"main\"",
     "prerelease": "bun run build && bun run test",
     "release": "bunx standard-version && git push --follow-tags && npm publish",
     "test": "bun test"
