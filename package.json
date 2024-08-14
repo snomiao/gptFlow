@@ -1,6 +1,6 @@
 {
   "name": "gptflow",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A CLI tool to integrate ChatGPT with shell text streams for seamless text processing.",
   "keywords": [
     "cli"
@@ -21,8 +21,8 @@
     "types": "./index.ts"
   },
   "bin": {
-    "gptflow": "./bin/cli.js",
-    "gf": "./bin/cli.js"
+    "gptflow": "bin/cli.js",
+    "gf": "bin/cli.js"
   },
   "main": "./dist/index.js",
   "module": "index.ts",
