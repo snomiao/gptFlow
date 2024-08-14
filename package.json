@@ -1,6 +1,6 @@
 {
   "name": "gptflow",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A CLI tool to integrate ChatGPT with shell text streams for seamless text processing.",
   "keywords": [
     "cli"
@@ -33,7 +33,7 @@
   ],
   "scripts": {
     "build": "bun build:bin && bun build:js",
-    "build:bin": "bun build ./cli.ts --outdir=bin/cli.js",
+    "build:bin": "bun build ./cli.ts --outdir=bin",
     "build:js": "bun build ./index.ts --outdir=dist",
     "build:type": "tsc -d --noEmit false --emitDeclarationOnly --outDir dist",
     "prerelease": "bun run build && bun run test",
