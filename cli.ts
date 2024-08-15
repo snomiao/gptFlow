@@ -10,6 +10,13 @@ await yargs(hideBin(process.argv))
     "Generate GPT answer, uses gpt-4o for now.",
     (y) =>
       y
+        // .string("code")
+        // .describe(
+        //   "code",
+        //   "Postprocess: extract contents in code block ```.*```"
+        // )
+        // .alias("p", "code")
+        //
         .string("prefix")
         .describe("prefix", "Add Prompts before stdin.")
         .alias("p", "prefix")
@@ -26,7 +33,10 @@ await yargs(hideBin(process.argv))
         sf([argv.prefix?.concat("\n") ?? ""])
           .concat(upstream)
           .concat(sf([argv.suffix?.concat("\n") ?? ""]))
-      ).pipeTo(downstream);
+      )
+        .lines()
+        // .chunkIf((x) => x)
+        .pipeTo(downstream);
     }
   )
   .help()
