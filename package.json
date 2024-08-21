@@ -1,6 +1,6 @@
 {
   "name": "gptflow",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "A CLI tool to integrate ChatGPT with shell text streams for seamless text processing.",
   "keywords": [
     "cli"
