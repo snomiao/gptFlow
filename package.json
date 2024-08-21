@@ -1,6 +1,6 @@
 {
   "name": "gptflow",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A CLI tool to integrate ChatGPT with shell text streams for seamless text processing.",
   "keywords": [
     "cli"
@@ -43,8 +43,9 @@
     "@types/yargs": "^17.0.33",
     "bun": "^1.1.22",
     "chatgpt-template": "^1.1.4",
+    "globflow": "^0.0.6",
     "process": "^0.11.10",
-    "sflow": "^1.16.7",
+    "sflow": "^1.16.20",
     "typescript": "^5.5.4",
     "yargs": "^17.7.2"
   },

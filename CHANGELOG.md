@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/snomiao/gptFlow/compare/v0.0.10...v0.0.11) (2024-08-21)
+
+
+### Bug Fixes
+
+* **main:** bin ([8145546](https://github.com/snomiao/gptFlow/commit/81455464101cff45a29f66263ccb78d8adb40ba2))
+
 ### [0.0.10](https://github.com/snomiao/gptFlow/compare/v0.0.9...v0.0.10) (2024-08-15)
 
 ### [0.0.9](https://github.com/snomiao/gptFlow/compare/v0.0.8...v0.0.9) (2024-08-15)
