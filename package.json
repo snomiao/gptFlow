@@ -34,7 +34,7 @@
     "build": "bun build:cli && bun build:js",
     "build:cli": "bun build ./cli.ts --outdir=bin",
     "build:js": "bun build ./index.ts --outdir=dist",
-    "build:type": "tsc -d --noEmit false --emitDeclarationOnly --outDir dist",
+    "build:type": "tsrs -d --noEmit false --emitDeclarationOnly --outDir dist",
     "prerelease": "bun run build && bun run test",
     "release": "bunx standard-version && git push --follow-tags && npm publish",
     "test": "bun test"
@@ -51,7 +51,8 @@
   },
   "devDependencies": {
     "@types/bun": "^1.1.6",
-    "@types/jest": "^29.5.12"
+    "@types/jest": "^29.5.12",
+    "tsrs": "0.25.0-ts7.1.0-beta"
   },
   "peerDependencies": {
     "typescript": "^5.5.4"
